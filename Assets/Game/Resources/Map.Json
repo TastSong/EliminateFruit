@@ -1,0 +1,301 @@
+{
+    "MapList": [
+        {
+            "TargetScore": 1500,
+            "LimitTime": 61.0,
+            "FruitIndexs": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "TargetScore": 1600,
+            "LimitTime": 63.0,
+            "FruitIndexs": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "TargetScore": 1700,
+            "LimitTime": 65.0,
+            "FruitIndexs": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 1800,
+            "LimitTime": 67.0,
+            "FruitIndexs": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 2000,
+            "LimitTime": 69.0,
+            "FruitIndexs": [
+                1,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 2200,
+            "LimitTime": 71.0,
+            "FruitIndexs": [
+                1,
+                2,
+                3,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 2300,
+            "LimitTime": 73.0,
+            "FruitIndexs": [
+                1,
+                2,
+                3,
+                4,
+                7
+            ]
+        },
+        {
+            "TargetScore": 2600,
+            "LimitTime": 75.0,
+            "FruitIndexs": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "TargetScore": 2900,
+            "LimitTime": 77.0,
+            "FruitIndexs": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "TargetScore": 3000,
+            "LimitTime": 79.0,
+            "FruitIndexs": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "TargetScore": 3200,
+            "LimitTime": 81.0,
+            "FruitIndexs": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 3300,
+            "LimitTime": 83.0,
+            "FruitIndexs": [
+                2,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 3600,
+            "LimitTime": 85.0,
+            "FruitIndexs": [
+                2,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 3800,
+            "LimitTime": 87.0,
+            "FruitIndexs": [
+                1,
+                2,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "TargetScore": 4000,
+            "LimitTime": 89.0,
+            "FruitIndexs": [
+                1,
+                2,
+                3,
+                4,
+                7
+            ]
+        },
+        {
+            "TargetScore": 4200,
+            "LimitTime": 91.0,
+            "FruitIndexs": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "TargetScore": 4300,
+            "LimitTime": 93.0,
+            "FruitIndexs": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "TargetScore": 4400,
+            "LimitTime": 95.0,
+            "FruitIndexs": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "TargetScore": 4500,
+            "LimitTime": 97.0,
+            "FruitIndexs": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 4600,
+            "LimitTime": 99.0,
+            "FruitIndexs": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 4700,
+            "LimitTime": 101.0,
+            "FruitIndexs": [
+                1,
+                2,
+                3,
+                5,
+                7
+            ]
+        },
+        {
+            "TargetScore": 4800,
+            "LimitTime": 103.0,
+            "FruitIndexs": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ]
+        },
+        {
+            "TargetScore": 4900,
+            "LimitTime": 105.0,
+            "FruitIndexs": [
+                2,
+                3,
+                4,
+                5,
+                6
+            ]
+        },
+        {
+            "TargetScore": 5000,
+            "LimitTime": 107.0,
+            "FruitIndexs": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 5100,
+            "LimitTime": 109.0,
+            "FruitIndexs": [
+                3,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 5200,
+            "LimitTime": 111.0,
+            "FruitIndexs": [
+                1,
+                4,
+                5,
+                6,
+                7
+            ]
+        },
+        {
+            "TargetScore": 5300,
+            "LimitTime": 113.0,
+            "FruitIndexs": [
+                1,
+                2,
+                3,
+                6,
+                7
+            ]
+        }
+    ]
+}
