@@ -14,6 +14,7 @@ public class TouchView : View
     private bool needMusic;
 
     public bool Stop = false;
+    public bool isSpeedUp = false;
 
     private List<GameObject> selectedFruits = new List<GameObject>();
     private List<GameObject> lines = new List<GameObject>();
@@ -27,6 +28,9 @@ public class TouchView : View
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("按钮抬起");
+            Time.timeScale = 1f;
+
             Collider2D col = Physics2D.OverlapPoint(point);
             if (col == null || !col.name.Contains("Fruit"))
                 return;
@@ -105,6 +109,10 @@ public class TouchView : View
             {
                 //发送一个事件，来删除
                 dispatcher.Dispatch(GameEvents.CommmandEvent.DESTROY_FRUIT, selectedFruits);
+                Debug.Log("按钮抬起");
+                if (isSpeedUp) {
+                    Time.timeScale = 1.6f;
+                }
             }
             else if (selectedFruits.Count == 1)
             {

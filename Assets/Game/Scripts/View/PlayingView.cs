@@ -9,8 +9,29 @@ public class PlayingView : EventView
     public Text txt_Target;
     public Text txt_Level;
     public Slider sld_Timer;
+    public Button stopBtn;
+    public Sprite[] stopBtnSprites;
+    public Button speedUpBtn;
+    public Sprite[] speedUpSprites;
 
     private bool isStop = false;
+    private bool isSpeedUp = false;
+
+    protected override void Start() {
+        base.Start();
+
+        stopBtn.onClick.AddListener(() => {
+            isStop = !isStop;
+            GameObject.FindObjectOfType<TouchView>().Stop = isStop;
+            stopBtn.GetComponent<Image>().sprite = isStop ? stopBtnSprites[0] : stopBtnSprites[1];
+        });
+
+        speedUpBtn.onClick.AddListener(() => {
+            isSpeedUp = !isSpeedUp;
+            GameObject.FindObjectOfType<TouchView>().isSpeedUp = isSpeedUp;
+            speedUpBtn.GetComponent<Image>().sprite = isSpeedUp ? speedUpSprites[1] : speedUpSprites[0];
+        });
+    }
 
     public void UpdateShow(int lv, int score, int target)
     {
@@ -41,13 +62,5 @@ public class PlayingView : EventView
 
         //发送游戏结束的事件
         dispatcher.Dispatch(GameEvents.ViewEvent.GAMEOVER);
-    }
-
-
-    public void OnStopClick()
-    {
-        isStop = !isStop;
-        GameObject.FindObjectOfType<TouchView>().Stop = isStop;
-    }
-
+    } 
 }
