@@ -16,25 +16,24 @@ public class ScrollControl : MonoBehaviour, IEndDragHandler
 
         set
         {
-            this.page = Mathf.Clamp(value, 1, 3);
-            if (page == 1)
-            {
-                target = 0;
-            }
-            else if (page == 2)
-            {
-                target = 0.5f;
-            }
-            else if (page == 3)
-            {
-                target = 1f;
-            }
+            this.page = Mathf.Clamp(value, 1, totalPage);
+            target = (page - 1) * pageSize;
             start = true;
         }
     }
 
     private float target;
     private bool start;
+    private int totalPage;
+    private float pageSize;
+
+    private void Start() {
+        MapInfoList mapInfoList = JsonUtility.FromJson<MapInfoList>(Resources.Load<TextAsset>("Map").text);
+        totalPage = (int)Mathf.Ceil(mapInfoList.MapList.Count / 9f);
+        pageSize = 1f / (totalPage - 1);
+        Debug.Log("++++++++++++totalPage " + totalPage);
+        Debug.Log("++++++++++++pageSize " + pageSize);
+    }
 
     void Update()
     {
@@ -56,23 +55,17 @@ public class ScrollControl : MonoBehaviour, IEndDragHandler
     public void ChangePage(int amount)
     {
         Page += amount;
+        Debug.Log("++++++++++Page " + Page);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         float h = ScrollRect.horizontalNormalizedPosition;
-
-        if (h <= 0.25f)
-        {
-            Page = 1;
-        }
-        else if (h > 0.25f && h < 0.75f)
-        {
-            Page = 2;
-        }
-        else if (h >= 0.75f)
-        {
-            Page = 3;
+        Debug.Log("++ horizontalNormalizedPosition = " + h);
+        for (int i = 0; i < totalPage; i++) {
+            if (h > (i - 1) * pageSize + pageSize / 2 && h <= i * pageSize + pageSize / 2) {
+                page = i + 1;
+            }
         }
     }
 }

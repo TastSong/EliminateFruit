@@ -10,7 +10,7 @@ public class SelectMapView : View
     
     public void Init()
     {
-        MapViewArray = FindObjectsOfType<MapView>();
+        MapViewArray = FindObjectsOfType<MapView>();       
     }
 
 }

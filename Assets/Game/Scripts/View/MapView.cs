@@ -16,8 +16,10 @@ public class MapView : MonoBehaviour, IPointerClickHandler
         get { return locked; }
         set
         {
-            if (!value)
+            if (!value) {
                 GetComponentInChildren<Text>().text = Level.ToString();
+            }
+
             int index = value ? 0 : 1;
             GetComponent<Image>().sprite = States[index];
 

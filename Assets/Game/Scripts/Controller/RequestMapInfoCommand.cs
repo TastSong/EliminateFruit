@@ -26,6 +26,7 @@ public class RequestMapInfoCommand : Command
 
         MapInfoList mapInfoList = JsonUtility.FromJson<MapInfoList>(json);
         GameModel.MapList = mapInfoList.MapList;
+        Debug.Log("++++++++++++GameModel.TotalPage " + GameModel.TotalPage);
     }
 
 }

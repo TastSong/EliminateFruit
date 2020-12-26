@@ -10,7 +10,7 @@ public class GameModel
         set
         {
             mapList = value;
-        }
+        }     
     }
 
     //当前地图信息
@@ -18,6 +18,12 @@ public class GameModel
     public int CurrentTarget { get { return currentMapInfo.TargetScore; } }
     public float CurrentTime { get { return currentMapInfo.LimitTime; } }
     public int[] CurrenFruits { get { return currentMapInfo.FruitIndexs; } }
+
+    public int TotalPage {
+        get {
+            return (int)Mathf.Ceil(mapList.Count / 9f);
+        }
+    }
 
     //当前的关卡
     private int currentLevel;
