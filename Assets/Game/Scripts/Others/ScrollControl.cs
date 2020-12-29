@@ -27,13 +27,21 @@ public class ScrollControl : MonoBehaviour, IEndDragHandler
     private int totalPage;
     private float pageSize;
 
-    private void Start() {
+    private void OnEnable() {
         MapInfoList mapInfoList = JsonUtility.FromJson<MapInfoList>(Resources.Load<TextAsset>("Map").text);
         totalPage = (int)Mathf.Ceil(mapInfoList.MapList.Count / 9f);
         pageSize = 1f / (totalPage - 1);
-        Debug.Log("++++++++++++totalPage " + totalPage);
-        Debug.Log("++++++++++++pageSize " + pageSize);
+        Page =  (int)Mathf.Ceil(PlayerPrefs.GetInt("ReachedLevel", 1) / 9.0f);
+        Debug.Log("++++++++++++ curpage " + Page);
+        StartCoroutine(MoveToCurPage(Page));
     }
+
+    private IEnumerator MoveToCurPage(int curPage) {
+        yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
+        ScrollRect.horizontalNormalizedPosition = (curPage - 1) * pageSize;
+    }
+
 
     void Update()
     {
